@@ -1,0 +1,382 @@
+LÀNG DU LÃM – NHIỆM VỤ 1
+HỒI 2: TIÊN NHÂN GIÁNG LÂM – KHẢO NGHIỆM LINH CĂN
+
+Triển khai tiếp vào hệ thống nhiệm vụ hiện có trong Google AI Studio. Không viết lại game, không thay đổi map gốc, giữ toàn bộ hệ thống NPC, thời tiết và sinh hoạt đang hoạt động.
+
+PHÂN CẢNH 1 – HAI NGÀY SAU
+
+Khi lịch trong game trôi qua hai ngày kể từ thời điểm được thông báo về đợt tuyển chọn, tự động cập nhật nhiệm vụ.
+
+Thông báo:
+“Tiếng chuông vang vọng khắp Làng Du Lãm. Hôm nay chính là ngày tiên nhân giáng lâm tuyển chọn đệ tử!”
+
+Mục tiêu mới: Đến quảng trường làng.
+
+- Đánh dấu vị trí quảng trường trên bản đồ.
+- Dân làng bắt đầu rời nhà, đồng ruộng, cửa hàng để tập trung.
+- Những NPC thanh thiếu niên đủ tuổi di chuyển đến phía trước quảng trường.
+- Người lớn, trẻ nhỏ và người già tập trung phía sau.
+- Trưởng làng đứng ở chính giữa, phía trước đoàn người.
+- A Huy đứng trong hàng thiếu niên.
+- Cho phép người chơi tự di chuyển đến quảng trường.
+
+Khi Tiểu Phàm tiến vào khu vực kích hoạt, nhân vật tự động đi đến vị trí còn trống ở hàng đầu, gần A Huy. Chuyển sang trạng thái sự kiện cốt truyện.
+
+Trưởng làng:
+“Các vị hương thân! Hôm nay là ngày trọng đại của làng chúng ta. Tiên nhân từ tiên môn sắp giáng lâm, mong mọi người giữ trật tự, chớ gây ồn ào!”
+
+A Huy (thì thầm với Tiểu Phàm):
+“Tiểu Phàm, ngươi cũng đến rồi à? Hừ, hôm nay ta nhất định phải được tiên nhân thu nhận. Đến lúc đó, ngươi đừng có mà ghen tị đấy!”
+
+Tiểu Phàm:
+“Còn chưa khảo nghiệm, sao ngươi biết mình sẽ được chọn?”
+
+A Huy:
+“Cứ chờ xem!”
+
+Đúng lúc đó, một tiếng kiếm minh vang lên từ chân trời.
+
+PHÂN CẢNH 2 – LỤC NHAM NGỰ KIẾM GIÁNG LÂM
+
+Camera từ từ hướng lên bầu trời.
+
+Một đạo kiếm quang màu xanh nhạt xé gió bay tới. Phía trên phi kiếm là một nam tử trẻ tuổi, đạo bào xanh trắng tung bay, tóc dài búi cao bằng trâm ngọc.
+
+Lục Nham:
+- Cảnh giới: Trúc Cơ sơ kỳ.
+- Trang phục: đạo bào xanh ngọc, nội sam trắng.
+- Tóc dài, búi cao bằng trâm ngọc.
+- Khuôn mặt thanh tú, thần sắc điềm nhiên.
+- Chân đạp một thanh phi kiếm màu bạc xanh.
+- Linh khí mờ nhạt lưu chuyển quanh thân.
+
+Hiệu ứng chuyển cảnh:
+1. Một đốm sáng xuất hiện trên bầu trời.
+2. Đốm sáng dần lớn lên, hiện rõ phi kiếm và Lục Nham.
+3. Kiếm lao theo đường chéo từ trên cao xuống.
+4. Tạo vệt kiếm quang phía sau.
+5. Áo, tóc và dải lụa chuyển động theo gió.
+6. Linh khí xanh nhạt xoay quanh cơ thể.
+7. Lục Nham giảm tốc, lơ lửng phía trên quảng trường.
+8. Phi kiếm từ từ hạ thấp, Lục Nham bước xuống mặt đất.
+9. Một vòng linh khí lan ra trên nền đất, bụi nhẹ bốc lên.
+10. Phi kiếm thu nhỏ thành một đạo sáng rồi biến mất vào tay áo.
+
+Camera trở lại vị trí bình thường.
+
+Dân làng:
+“Tiên nhân! Là tiên nhân thật sự!”
+“Trời ơi! Ngự kiếm phi hành! Ta chưa từng thấy cảnh tượng như vậy!”
+“Không ngờ đời này ta lại có thể tận mắt nhìn thấy tiên nhân!”
+
+Trưởng làng bước lên, cúi người hành lễ:
+“Lão hủ là trưởng làng Du Lãm, cung nghênh tiên sư đại giá quang lâm! Đường sá xa xôi, chẳng hay tiên sư có cần nghỉ ngơi đôi chút?”
+
+Lục Nham:
+“Không cần đa lễ. Ta là Lục Nham, đệ tử ngoại môn phụ trách tuyển chọn lần này.”
+“Phụng mệnh tông môn đến các thôn làng khảo nghiệm linh căn. Kẻ có tư chất thích hợp, ta sẽ dẫn về tông môn tu hành.”
+
+Trưởng làng:
+“Đa tạ tiên sư đã ban cho đám trẻ trong làng một cơ duyên lớn lao! Lão hủ đã cho tập hợp tất cả thiếu niên đủ tuổi, xin tiên sư xem xét.”
+
+Lục Nham:
+“Ừm. Vậy bắt đầu đi.”
+
+PHÂN CẢNH 3 – QUAN TRẮC THẠCH
+
+Lục Nham giơ tay phải, khẽ phất tay áo.
+
+Một khối linh thạch cổ xưa từ trong luồng sáng xuất hiện, bay đến chính giữa quảng trường.
+
+Hiệu ứng:
+- Một vòng pháp trận mờ hiện lên.
+- Quan Trắc Thạch xuất hiện từ nhỏ đến lớn.
+- Khối đá lơ lửng, sau đó hạ xuống bệ.
+- Các đường vân cổ xưa trên đá phát sáng.
+- Năm loại linh quang tượng trưng cho Kim, Mộc, Thủy, Hỏa, Thổ lóe lên rồi tắt.
+- Ánh sáng ổn định ở trạng thái chờ khảo nghiệm.
+
+Lục Nham:
+“Đây là Quan Trắc Thạch, pháp khí chuyên dùng để khảo nghiệm linh căn.”
+“Phàm nhân muốn tu tiên, trước hết phải có tư chất cảm ứng linh khí thiên địa.”
+“Lần lượt tiến lên, đặt tay lên mặt đá. Chớ vận lực, chớ kinh hoảng, chỉ cần giữ tâm thần bình tĩnh.”
+
+Trưởng làng:
+“Các ngươi nghe rõ chưa? Lần lượt tiến lên! Không được chen lấn, càng không được vô lễ trước mặt tiên sư!”
+
+PHÂN CẢNH 4 – KHẢO NGHIỆM DÂN LÀNG
+
+Cho một số thiếu niên NPC tiến lên trước.
+
+Mỗi NPC:
+- Bước đến Quan Trắc Thạch.
+- Đặt tay lên bề mặt.
+- Đá phát ra ánh sáng yếu hoặc không phản ứng.
+- Lục Nham đưa ra nhận xét ngắn.
+- NPC quay trở lại hàng với vẻ thất vọng.
+
+Một vài câu thoại ngẫu nhiên của Lục Nham:
+“Không có linh căn. Người tiếp theo.”
+“Linh khí quá yếu, không đạt yêu cầu.”
+“Đáng tiếc, ngươi không có tư chất nhập đạo.”
+
+Người dân có thể thở dài, thất vọng, hoặc an ủi con cái.
+Không kéo dài quá lâu: chỉ cần 3–5 NPC khảo nghiệm trước A Huy.
+
+PHÂN CẢNH 5 – A HUY KHẢO NGHIỆM
+
+Trưởng làng:
+“Người tiếp theo, A Huy!”
+
+A Huy bước ra khỏi hàng, chỉnh lại áo, nhìn Tiểu Phàm với vẻ đắc ý.
+
+A Huy:
+“Tiểu Phàm, mở to mắt mà nhìn cho kỹ!”
+
+A Huy đặt tay lên Quan Trắc Thạch.
+Khối đá rung nhẹ.
+
+Ba luồng linh quang lần lượt bừng sáng:
+- Hỏa – đỏ rực.
+- Thổ – vàng đất.
+- Thủy – xanh lam.
+
+Ba luồng sáng xoay quanh Quan Trắc Thạch, rồi tụ lại thành ba cột sáng nhỏ.
+
+Thông báo khảo nghiệm:
+Tên: A Huy
+Linh căn: Hỏa – Thổ – Thủy
+Phân loại: Tam Linh Căn
+Phẩm chất: Trung đẳng
+
+Lục Nham khẽ nhướng mày:
+“Ồ? Hỏa, Thổ, Thủy... Tam Linh Căn.”
+“Không tệ...”
+“Dẫu không phải tư chất thượng thừa, nhưng đã đủ điều kiện bước lên tiên lộ. Nếu chịu khó tu luyện, ngày sau chưa chắc không thể Trúc Cơ.”
+
+A Huy:
+“Đa tạ tiên sư! Đệ tử nhất định chăm chỉ tu hành, không phụ kỳ vọng!”
+
+Lục Nham:
+“Ngươi tạm đứng sang bên phải, chờ khảo nghiệm kết thúc.”
+
+Trưởng làng:
+“Ha ha ha! Tốt! Tốt lắm! Làng chúng ta cuối cùng cũng xuất hiện một người có tiên duyên!”
+
+Dân làng:
+“A Huy thật có phúc!”
+“Cha mẹ nó phen này nở mày nở mặt rồi!”
+
+A Huy ngẩng cao đầu, nhìn Tiểu Phàm đầy tự mãn.
+
+PHÂN CẢNH 6 – TIỂU PHÀM KHẢO NGHIỆM
+
+Trưởng làng:
+“Người tiếp theo... Tiểu Phàm!”
+
+Người chơi bước đến Quan Trắc Thạch.
+
+Lục Nham:
+“Đặt tay lên.”
+
+Khi Tiểu Phàm chạm vào đá, một luồng sáng nhàn nhạt xuất hiện.
+
+Sau đó năm màu linh quang lần lượt sáng lên:
+- Kim – vàng kim.
+- Mộc – xanh lục.
+- Thủy – xanh lam.
+- Hỏa – đỏ.
+- Thổ – vàng đất.
+
+Khác với A Huy, năm luồng linh quang nhỏ yếu, xen lẫn và phân tán, không thể hội tụ thành cột sáng hoàn chỉnh.
+Quan Trắc Thạch chớp sáng vài lần rồi trở lại bình thường.
+
+Thông báo khảo nghiệm:
+Tên: Tiểu Phàm
+Linh căn: Kim – Mộc – Thủy – Hỏa – Thổ
+Phân loại: Ngũ Hành Tạp Linh Căn
+Phẩm chất: Hạ đẳng
+
+Lục Nham:
+“Kim, Mộc, Thủy, Hỏa, Thổ... Ngũ Hành Tạp Linh Căn.”
+“Ngũ hành hỗn tạp, linh khí khó tụ. Với tư chất này, dù có dốc sức tu luyện, tiến cảnh cũng chậm chạp hơn người thường rất nhiều.”
+
+Lục Nham khẽ lắc đầu.
+“Tiên đạo vô vọng...”
+
+Tiểu Phàm:
+“Tiên sư... chẳng lẽ có linh căn mà vẫn không thể tu tiên sao?”
+
+Lục Nham:
+“Có linh căn không đồng nghĩa với có tiên duyên.”
+“Con đường tu hành tranh đoạt với thiên địa. Kẻ tư chất xuất chúng còn có thể bỏ mạng giữa đường, huống chi là Ngũ Hành Tạp Linh Căn.”
+“Ta không nói ngươi tuyệt đối không thể tu luyện. Nhưng với điều kiện của tông môn, không thể thu nhận ngươi.”
+
+Tiểu Phàm:
+“... Ta hiểu rồi.”
+
+PHÂN CẢNH 7 – TRƯỞNG LÀNG AN ỦI
+
+Trưởng làng nhìn Tiểu Phàm, vẻ mặt thoáng thất vọng, sau đó chậm rãi bước lại gần.
+
+Trưởng làng:
+“Nhóc con...”
+“Haizz, tạo hóa trêu ngươi. Lão phu vốn còn mong ngươi có thể cùng A Huy bước lên tiên lộ.”
+“Nhưng ngươi chớ quá đau lòng. Tu tiên hay không cũng chẳng quyết định giá trị một đời người.”
+“Dù không được tiên môn thu nhận, ngươi vẫn là đứa trẻ của làng Du Lãm chúng ta.”
+“Lão phu già rồi, chẳng hiểu hết chuyện tiên đạo. Nhưng lão phu tin rằng, con đường của một người không nên chỉ được định đoạt bởi một khối đá.”
+
+PHÂN CẢNH 8 – A HUY KHIÊU KHÍCH
+
+A Huy bước đến gần Tiểu Phàm.
+
+A Huy:
+“Ha ha ha! Tiểu Phàm, ngươi nghe rõ chưa?”
+“Ngũ Hành Tạp Linh Căn! Ta còn tưởng ngươi có bản lĩnh gì ghê gớm lắm!”
+“Ngày trước ngươi còn dám cãi lời ta. Bây giờ thì sao? Ta sắp trở thành đệ tử tiên môn, còn ngươi vẫn chỉ là một tên phàm nhân trong làng!”
+
+Tiểu Phàm – lựa chọn phản ứng:
+1. “Hừ, hôm nay ngươi hơn ta, chưa chắc cả đời đều hơn ta!”
+2. “Có gì đáng khoe khoang? Chẳng qua ngươi may mắn hơn ta mà thôi.”
+3. “...” (Im lặng, không đáp.)
+
+Nếu chọn 1, A Huy:
+“Ha ha! Khẩu khí lớn thật! Vậy ta sẽ chờ xem một tên Tạp Linh Căn như ngươi có thể làm nên trò trống gì!”
+
+Nếu chọn 2, A Huy:
+“May mắn? Hừ! Trong tiên đạo, tư chất chính là vốn liếng. Ngươi không có, thì đừng trách trời bất công!”
+
+Nếu chọn 3, A Huy:
+“Sao thế? Không còn lời nào để nói à? Xem ra ngươi cũng biết thân biết phận rồi!”
+
+PHÂN CẢNH 9 – LỤC NHAM NGĂN LẠI
+
+Lục Nham liếc nhìn A Huy.
+
+Lục Nham:
+“Đủ rồi.”
+“Chưa bước chân vào tiên môn đã sinh lòng kiêu ngạo, ngươi tưởng có Tam Linh Căn là có thể tung hoành thiên hạ sao?”
+“Tu tiên không chỉ xét tư chất, mà còn phải xét tâm tính. Nếu giữ thái độ này, sớm muộn cũng tự chuốc lấy tai họa.”
+
+A Huy lập tức cúi đầu:
+“Đệ tử biết sai! Xin tiên sư trách phạt!”
+
+Lục Nham:
+“Biết sai thì sửa. Lần sau chớ tái phạm.”
+
+Lục Nham quay sang Tiểu Phàm:
+“Tiểu tử, ngươi cũng không cần quá để tâm.”
+“Đại đạo vô tình, nhưng thiên địa rộng lớn, không ai có thể nhìn thấu hết mọi cơ duyên.”
+“Chỉ là hôm nay, ta không thể đưa ngươi đi.”
+
+PHÂN CẢNH 10 – LỤC NHAM MANG A HUY RỜI LÀNG
+
+Khi quá trình khảo nghiệm kết thúc, Lục Nham thu hồi Quan Trắc Thạch.
+
+Lục Nham:
+“Khảo nghiệm đến đây kết thúc.”
+“Lần tuyển chọn này, chỉ có A Huy đạt yêu cầu nhập môn.”
+“A Huy, tiến lên.”
+
+A Huy:
+“Có đệ tử!”
+
+Lục Nham:
+“Ngươi hãy theo ta trở về tông môn. Từ hôm nay, ngươi cần đoạn tuyệt sự lười biếng của phàm tục, chuyên tâm tu hành.”
+
+Trưởng làng:
+“Tiên sư! Đa tạ ngài đã ban cho làng chúng ta cơ duyên này!”
+“Còn A Huy, sau này dù tu hành đến cảnh giới nào, cũng chớ quên nơi mình sinh ra.”
+
+A Huy:
+“Trưởng làng cứ yên tâm! Ngày sau ta tu luyện thành công, nhất định sẽ trở về!”
+
+A Huy quay đầu nhìn Tiểu Phàm lần cuối.
+
+A Huy:
+“Tiểu Phàm, bảo trọng nhé. Lần sau gặp lại, chỉ e ngươi phải gọi ta một tiếng tiên sư rồi! Ha ha!”
+
+Lục Nham vung tay. Một thanh phi kiếm bạc xanh xuất hiện trước mặt, dần phóng lớn.
+
+Lục Nham:
+“Lên đây.”
+
+A Huy bước lên phi kiếm, ban đầu có chút loạng choạng.
+
+Lục Nham:
+“Đứng vững, chớ vọng động.”
+
+Hiệu ứng:
+1. Phi kiếm xuất hiện và tăng kích thước.
+2. Lục Nham đứng phía trước, A Huy đứng phía sau.
+3. Linh khí hình thành một màn sáng bảo vệ hai người.
+4. Phi kiếm rời mặt đất, nâng lên phía trên quảng trường.
+5. Tạo gió khiến áo của dân làng lay động.
+6. Dân làng ngước nhìn, một số vẫy tay.
+7. Phi kiếm tăng tốc hướng về phía chân trời.
+8. Vệt kiếm quang kéo dài rồi biến mất.
+
+Trưởng làng:
+“Haizz... đi rồi.”
+
+Ông nhìn theo hướng phi kiếm vừa biến mất, rồi quay sang Tiểu Phàm.
+
+Trưởng làng:
+“Nhóc con, về thôi.”
+“Đường đời còn dài. Hôm nay không có tiên duyên, chưa chắc ngày mai đã không có cơ hội khác.”
+“Chỉ cần ngươi còn sống, còn bước tiếp, thì mọi chuyện vẫn chưa phải kết thúc.”
+
+KẾT THÚC NHIỆM VỤ 1
+
+Hiển thị:
+“Nhiệm vụ hoàn thành: Tiên Duyên Khởi Đầu”
+
+Kết quả:
+- A Huy được Lục Nham thu nhận.
+- Tiểu Phàm được xác định là Ngũ Hành Tạp Linh Căn.
+- Lục Nham và A Huy rời khỏi làng.
+- Người chơi trở lại quyền điều khiển tự do.
+- Trưởng làng trở lại lịch sinh hoạt.
+- Dân làng giải tán và trở về công việc.
+- Lưu kết quả khảo nghiệm linh căn vĩnh viễn vào dữ liệu nhân vật.
+- Lưu phản ứng mà người chơi đã chọn khi đối đáp A Huy, dùng cho lần tái ngộ sau này.
+
+YÊU CẦU TRIỂN KHAI KỸ THUẬT
+
+1. Điều khiển và chuyển cảnh
+- Sử dụng hệ thống camera, tọa độ thế giới và xử lý va chạm hiện có.
+- Camera dịch chuyển mượt, không giật.
+- Không tải lại trang khi chuyển cảnh.
+- Tạm khóa điều khiển người chơi khi đang diễn ra cinematic.
+- Không khiến dân làng đứng chồng lên nhau.
+- NPC được xếp hàng theo các vị trí hợp lệ.
+- Chỉ phát cảnh giáng lâm và rời làng một lần.
+- Tạm dừng tiến trình cinematic khi hội thoại đang chờ người chơi bấm tiếp tục.
+
+2. Ngoại hình và animation Lục Nham
+- Avatar hội thoại và nhân vật trên bản đồ là hai loại tài nguyên khác nhau.
+- Sử dụng avatar WebP Lục Nham đã tạo cho khung hội thoại.
+- Với nhân vật trên bản đồ, tạo sprite toàn thân phù hợp phong cách game đang có.
+- Sprite cần thể hiện đạo bào xanh trắng, tóc búi trâm ngọc, tư thế đứng/ngự kiếm, tóc và vạt áo chuyển động khi bay, tư thế đáp đất.
+- Không dùng ảnh avatar chân dung làm nguyên cả nhân vật bay trên phi kiếm.
+
+3. Hiệu ứng nhẹ, tối ưu điện thoại
+- Ưu tiên Canvas 2D, sprite nhỏ hoặc hệ thống particle có sẵn.
+- Bắt buộc có kiếm quang, phi kiếm bay và giảm tốc, linh khí quanh Lục Nham, hiệu ứng đáp đất, Quan Trắc Thạch xuất hiện, năm loại linh quang, Tam Linh Căn của A Huy, Ngũ Hành Tạp Linh Căn của Tiểu Phàm, phi kiếm rời làng.
+- Không dùng video dựng sẵn, thư viện 3D nặng hoặc hiệu ứng toàn màn hình gây giật lag.
+
+4. Thời gian và trạng thái nhiệm vụ
+- Thay mốc chờ 3 ngày cũ thành 2 ngày trong game.
+- Dùng hệ thống thời gian hiện có để kích hoạt nhiệm vụ.
+- Lưu từng giai đoạn cinematic và kết quả lựa chọn.
+- Tránh phát lại sự kiện khi tải lại game.
+- Nếu người chơi từ chối đăng ký trước đó, vẫn có thể đến quảng trường quan sát buổi tuyển chọn; cho phép xin khảo nghiệm trước khi kết thúc, không ép người chơi đăng ký từ trước.
+- Đảm bảo Tiểu Phàm luôn có thể hoàn thành diễn biến khảo nghiệm của Nhiệm vụ 1.
+- Không cho phép bỏ qua toàn bộ cảnh khiến nhiệm vụ mắc kẹt.
+
+5. Kiểm thử
+- Kiểm tra NPC tập trung, đội hình xếp hàng, chuyển động phi kiếm, thoại phân nhánh, hiển thị linh căn, lưu tiến trình, tải lại trang, hiệu năng Android và việc khôi phục điều khiển sau khi Lục Nham rời đi.
+- Giữ nguyên các map và hệ thống đang hoạt động, chỉ mở rộng nội dung nhiệm vụ, không tái cấu trúc toàn bộ dự án.
+
+MỤC TIÊU CUỐI CÙNG
+Người chơi trải nghiệm toàn bộ cảnh tiên nhân giáng lâm, khảo nghiệm linh căn và A Huy rời làng thông qua gameplay thật, hoạt ảnh thật và hội thoại tương tác, không phải chuỗi ảnh tĩnh minh họa.
